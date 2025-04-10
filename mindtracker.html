@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeuroCommand OS - Cognitive Resilience Simulator</title>
+  <link rel="stylesheet" href="mindtracker.css">
+</head>
+<body class="theme-focus">
+  <div class="container">
+    <h1>NeuroCommand OS</h1>
+    <p>Cognitive Simulation & Mental Load Management for High-Performance Environments</p>
+
+    <div class="persona-switcher">
+      <h2>Switch Operational Persona</h2>
+      <div class="personas">
+        <div class="persona">
+          <h3>Commander</h3>
+          <p><strong>Mode:</strong> Focus & Productivity</p>
+          <p>You're in charge—structured, decisive, and goal-driven.</p>
+          <button onclick="switchPersona('focus')">Activate</button>
+        </div>
+
+        <div class="persona">
+          <h3>Healer</h3>
+          <p><strong>Mode:</strong> Emotional Recovery</p>
+          <p>Rest, reflect, and reset. A space to calm your storm.</p>
+          <button onclick="switchPersona('heal')">Activate</button>
+        </div>
+
+        <div class="persona">
+          <h3>Dreamer</h3>
+          <p><strong>Mode:</strong> Creativity & Vision</p>
+          <p>Imagine freely, explore ideas, and build without limits.</p>
+          <button onclick="switchPersona('dream')">Activate</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="tracker mood-tracker">
+      <h2>Mood Tracker</h2>
+      <p>Track your current emotional state and let your system reflect your mood.</p>
+      <select id="moodSelect" onchange="updateMood()">
+        <option value="happy">Happy</option>
+        <option value="neutral">Neutral</option>
+        <option value="sad">Sad</option>
+        <option value="angry">Angry</option>
+        <option value="anxious">Anxious</option>
+      </select>
+
+      <div class="mood-display">
+        <div id="moodFace" class="mood-face">:)</div>
+        <div id="moodText" class="mood-description">Feeling good</div>
+      </div>
+    </div>
+
+    <div class="monitor">
+      <h3>Cognitive Load Monitor</h3>
+      <p>Adjust the slider to reflect your current mental load. Color-coded bar and alerts will help guide your response.</p>
+      <div class="loadBar">
+        <div class="loadFill" id="loadFill"></div>
+      </div>
+      <input type="range" min="0" max="100" value="50" oninput="adjustLoad(this.value)" />
+      <p id="loadHistory">Last adjusted: 50%</p>
+    </div>
+
+    <div class="scheduler">
+      <h3>Stability Protocol Scheduler</h3>
+      <p>Plan your next break or reflection ritual. Scheduling protocols at regular intervals boosts clarity.</p>
+      <input type="time" id="relaxTime" />
+      <button onclick="gainXP(10);alert('Protocol Scheduled!')">Schedule</button>
+    </div>
+
+    <div class="taskManager">
+      <h3>Intrusive Thought Manager</h3>
+      <p>Enter distractions or unwanted mental loops. Terminate them one by one as part of your mental cleanup.</p>
+      <input id="taskInput" placeholder="Distraction or intrusive pattern" />
+      <button onclick="addTask()">Add</button>
+      <div id="taskList"></div>
+    </div>
+
+    <div class="scanner">
+      <h3>Cognitive Clutter Scanner</h3>
+      <p>Simulate a full brain-scan to check for hidden stressors or unconscious distractions.</p>
+      <button onclick="gainXP(5);alert('Scan Complete. No Threats Detected.')">Run Scan</button>
+    </div>
+
+    <div class="gamify">
+      <h3>XP System</h3>
+      <p>Earn XP for every action that improves your mental clarity or control. Levels unlock over time.</p>
+      <p>Mission XP: <span id="xp">0</span></p>
+      <button onclick="gainXP(10)">Stabilize Mood (+10 XP)</button>
+      <p id="levelInfo">Level: 1</p>
+    </div>
+
+    <div class="achievements">
+      <h3>Neural Medals</h3>
+      <p>Collect badges based on your XP to track growth in resilience and mental command.</p>
+      <div id="badges"></div>
+    </div>
+  </div>
+
+  <script src="mindtracker.js"></script>
+</body>
+</html>
