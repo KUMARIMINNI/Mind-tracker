@@ -1,8 +1,5 @@
-## NeuroCommand OS
+## NeuroCommand OS - Cognitive Resilience Simulator
 
-## 🛠️ Installation
-
-Just open the `index.html` file in your browser. No backend, no setup required. Pure front-end simulation.
 
 ---
 
@@ -18,4 +15,5 @@ Just open the `index.html` file in your browser. No backend, no setup required. 
 Built with a dark mode UI for focus, animated emotional feedback, and structured mental strategies,
 NeuroCommand OS serves as a toolkit to simulate, visualize, and ultimately command your cognitive landscape.
 
+A pure front-end simulation.
 ---
