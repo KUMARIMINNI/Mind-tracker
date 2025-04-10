@@ -9,7 +9,7 @@
 - **Remote workers** aiming to maintain mental clarity.
 - **Neurodivergent users** building awareness and self-regulation routines.
 - **Creatives** needing a quick reset from overload or distraction.
-- 
+
 ## 🧠  Intention behind the design
 
 Built with a dark mode UI for focus, animated emotional feedback, and structured mental strategies,
