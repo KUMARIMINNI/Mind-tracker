@@ -47,7 +47,23 @@
         <option value="angry">Angry</option>
         <option value="anxious">Anxious</option>
       </select>
+      
+<div class="vault">
+  <h3>Solution Center</h3>
+  <p>If you're feeling overwhelmed, select how you're feeling and get a guided suggestion.</p>
+  <select id="feelingInput" onchange="giveSolution(this.value)">
+    <option value="">Select how you feel</option>
+    <option value="devastated">Devastated</option>
+    <option value="anxious">Anxious</option>
+    <option value="burned out">Burned Out</option>
+    <option value="unfocused">Unfocused</option>
+    <option value="sad">Sad</option>
+    <option value="angry">Angry</option>
+  </select>
+  <div id="solutionOutput" class="entry" style="margin-top:10px;"></div>
+</div>
 
+      
       <div class="mood-display">
         <div id="moodFace" class="mood-face">:)</div>
         <div id="moodText" class="mood-description">Feeling good</div>
