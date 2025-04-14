@@ -109,3 +109,39 @@ window.onload = function () {
   updateLevel();
   updateBadges();
 };
+function giveSolution(feeling) {
+  const solutionBox = document.getElementById('solutionOutput');
+  let solution = '';
+
+  switch (feeling) {
+    case 'devastated':
+      solution = "Take a deep breath. Switch to the Healer persona, play calm music, and try a 5-minute body scan meditation. You’re not alone.";
+      switchPersona('heal');
+      break;
+    case 'anxious':
+      solution = "Try grounding: name 5 things you can see, 4 you can touch, 3 you can hear. Switch to Healer and schedule a 10-min break.";
+      switchPersona('heal');
+      break;
+    case 'burned out':
+      solution = "You’ve likely been pushing too hard. Switch to Dreamer mode, and journal freely or take a mindful walk. Reset is strength.";
+      switchPersona('dream');
+      break;
+    case 'unfocused':
+      solution = "Switch to Commander. Use the Intrusive Thought Manager to unload distractions, then do a 10-minute focus sprint.";
+      switchPersona('focus');
+      break;
+    case 'sad':
+      solution = "Let yourself feel it. Switch to Healer. Put on soothing music or write a compassionate letter to yourself.";
+      switchPersona('heal');
+      break;
+    case 'angry':
+      solution = "Redirect energy—try a physical reset like a quick workout or cold splash. Switch to Commander and write out the trigger.";
+      switchPersona('focus');
+      break;
+    default:
+      solution = "";
+  }
+
+  solutionBox.textContent = solution;
+  if (solution) gainXP(7);
+}
